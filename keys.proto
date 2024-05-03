@@ -1,0 +1,20 @@
+syntax = "proto3";
+import "tagger/tagger.proto";
+package cashu.v1;
+option go_package = "github.com/cashu/rpc/keys";
+
+
+message KeysResponse{
+  repeated Keyset keysets = 1 [(tagger.tags) = "json:\"keysets\""];
+}
+message KeysRequest{
+
+}
+
+message Keyset {
+  string id = 1;
+  string unit = 2;
+  string mint_url = 3;
+  bool active = 4;
+  map<uint64, string> keys = 5;
+}

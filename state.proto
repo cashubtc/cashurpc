@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "message.proto";
+import "signature.proto";
+
+package cashu.v1;
+option go_package = "github.com/cashu/rpc/state";
+
+message PostCheckStateRequest {
+  repeated string secrets = 1;
+}
+
+message PostCheckStateResponse {
+  repeated States states = 1;
+}
+message States {
+  string secret = 1;
+  string state = 2;
+  string witness = 3;
+}

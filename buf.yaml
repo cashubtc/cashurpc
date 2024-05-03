@@ -1,0 +1,11 @@
+version: v1
+name: buf.build/cashu/rpc
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
+deps:
+  - buf.build/googleapis/googleapis
+  - buf.build/srikrsna/protoc-gen-gotag

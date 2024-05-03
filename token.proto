@@ -1,0 +1,19 @@
+syntax = "proto3";
+import "tagger/tagger.proto";
+
+
+import "proofs.proto";
+package cashu.v1;
+option go_package = "github.com/cashu/rpc/token";
+
+
+message TokenV3 {
+  repeated BaseToken token = 1;
+  string unit = 2;
+  string memo = 3;
+}
+
+message BaseToken {
+  string mint = 1;
+  repeated Proof proofs = 2;
+}
