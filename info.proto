@@ -1,10 +1,10 @@
 syntax = "proto3";
 package cashu.v1;
 option go_package = "github.com/cashu/rpc/info";
+
 enum MethodType {
   method_unspecified = 0;
   bolt11 = 1;
-  sat = 2;
   // add more if needed
 }
 
