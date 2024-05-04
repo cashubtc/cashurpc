@@ -1,5 +1,6 @@
 syntax = "proto3";
 package cashu.v1;
+import "mint.proto"
 option go_package = "github.com/cashu/rpc/info";
 
 enum MethodType {
@@ -14,9 +15,14 @@ enum ContactType {
   twitter = 2;
   nostr = 3;
 }
-
+message MethodTypes {
+  MethodType method = 1;
+  UnitType unit = 2;
+  uint64 min_amount = 3;
+  uint64 max_amount = 4;
+}
 message NutDetails {
-  repeated MethodType methods = 1;
+  repeated MethodTypes methods = 1;
   bool disabled = 2;
   bool supported = 3;
 }
@@ -32,7 +38,7 @@ message Contact {
 }
 
 message InfoRequest {
-  
+
 }
 message InfoResponse {
   string name = 1;
