@@ -1,6 +1,6 @@
 syntax = "proto3";
 package cashu.v1;
-import "mint.proto"
+import "mint.proto";
 option go_package = "github.com/cashu/rpc/info";
 
 enum MethodType {
