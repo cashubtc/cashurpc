@@ -18,8 +18,8 @@ enum ContactType {
 message MethodTypes {
   MethodType method = 1;
   UnitType unit = 2;
-  uint64 min_amount = 3;
-  uint64 max_amount = 4;
+  uint32 min_amount = 3;
+  uint32 max_amount = 4;
 }
 message NutDetails {
   repeated MethodTypes methods = 1;

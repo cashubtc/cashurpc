@@ -14,7 +14,7 @@ enum UnitType {
 
 
 message PostMintQuoteBolt11Request {
-  uint64 amount = 1;
+  uint32 amount = 1;
   string unit = 2;
 }
 
