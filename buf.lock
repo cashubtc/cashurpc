@@ -2,9 +2,14 @@
 version: v1
 deps:
   - remote: buf.build
+    owner: gogo
+    repository: protobuf
+    commit: 5461a3dfa9d941da82028ab185dc2a0e
+    digest: shake256:37c7c75224982038cb1abf45b481ef06716c1f806ffaa162018d0df092bd11a2a9b62c2d0dc0a2ae43beff86b6014fc0eb8c594ffd84d52ade4b08fca901eadc
+  - remote: buf.build
     owner: googleapis
     repository: googleapis
-    commit: a51f4a87c68c47f9901f3892e1ac4a0b
+    commit: 74015a8aeb8445aa9e3e1454cb54bc35
     digest: shake256:7149cf5e9955c692d381e557830555d4e93f205a0f1b8e2dfdae46d029369aa3fc1980e35df0d310f7cc3b622f93e19ad276769a283a967dd3065ddfd3a40e13
   - remote: buf.build
     owner: srikrsna
