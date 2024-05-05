@@ -3,7 +3,7 @@ package cashu.v1;
 option go_package = "github.com/cashu/rpc/message";
 
 message BlindedMessage {
-  uint32 amount = 1;
+  uint64 amount = 1;
   string id = 2;
   string B_ = 3;
 }

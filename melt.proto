@@ -21,8 +21,8 @@ message PostMeltQuoteStateResponse {
 
 message PostMeltQuoteBolt11Response {
   string quote = 1;
-  uint32 amount = 2;
-  uint32 fee_reserve = 3;
+  uint64 amount = 2;
+  uint64 fee_reserve = 3;
   bool paid = 4;
   int64 expiry = 5;
 }
