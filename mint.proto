@@ -21,8 +21,8 @@ message PostMintQuoteBolt11Request {
 message PostMintQuoteBolt11Response {
   string quote = 1 [json_name = "quote"];
   string request = 2 [json_name = "request"];
-  bool paid = 3 [json_name = "paid"];
-  int64 expiry = 4 [json_name = "expiry"];
+  bool paid = 3 [json_name = "paid",(gogoproto.jsontag) = "paid"];
+  int64 expiry = 4 [json_name = "expiry",(gogoproto.jsontag) = "expiry"];
 }
 
 
