@@ -3,6 +3,7 @@ syntax = "proto3";
 import "message.proto";
 import "signature.proto";
 import "tagger/tagger.proto";
+import "gogoproto/gogo.proto";
 package cashu.v1;
 option go_package = "github.com/cashu/rpc/mint";
 
