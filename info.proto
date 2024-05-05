@@ -46,7 +46,7 @@ message InfoResponse {
   string version = 3;
   string description = 4;
   string description_long = 5;
-  repeated string contact = 6;
+  repeated Contact contact = 6;
   string motd = 7;
   map<int32, NutDetails> nuts = 8;
 }
