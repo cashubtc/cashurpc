@@ -1,9 +1,10 @@
 syntax = "proto3";
 package cashu.v1;
 option go_package = "github.com/cashu/rpc/signature";
+import "tagger/tagger.proto";
 
 message BlindedSignature {
-  string id = 1;
-  uint64 amount = 2;
-  string C_ = 3;
+  string id = 1 [(tagger.tags) = "json:\"id\""];
+  uint32 amount = 2 [(tagger.tags) = "json:\"amount\""];
+  string C_ = 3[(tagger.tags) = "json:\"C_\""];
 }
