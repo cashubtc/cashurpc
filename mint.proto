@@ -19,10 +19,10 @@ message PostMintQuoteBolt11Request {
 }
 
 message PostMintQuoteBolt11Response {
-  string quote = 1 [(tagger.tags) = "json:\"quote\""];
-  string request = 2 [(tagger.tags) = "json:\"request\""];
-  bool paid = 3 [(tagger.tags) = "json:\"paid\""];
-  int64 expiry = 4 [(tagger.tags) = "json:\"expiry\""];
+  string quote = 1 [json_name = "quote"];
+  string request = 2 [json_name = "request"];
+  bool paid = 3 [json_name = "paid"];
+  int64 expiry = 4 [json_name = "expiry"];
 }
 
 
