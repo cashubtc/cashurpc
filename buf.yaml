@@ -8,5 +8,4 @@ lint:
     - DEFAULT
 deps:
   - buf.build/googleapis/googleapis
-  - buf.build/srikrsna/protoc-gen-gotag
   - buf.build/gogo/protobuf

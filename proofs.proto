@@ -1,7 +1,8 @@
 syntax = "proto3";
 
 package cashu.v1;
-option go_package = "github.com/cashu/rpc/proofs";
+option go_package = "gen/go/cashurpc";
+
 message Proof {
   uint64 amount = 1;
   string id = 2;

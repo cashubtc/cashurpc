@@ -4,7 +4,7 @@ import "message.proto";
 import "signature.proto";
 
 package cashu.v1;
-option go_package = "github.com/cashu/rpc/state";
+option go_package = "gen/go/cashurpc";
 
 message PostCheckStateRequest {
   repeated string secrets = 1;

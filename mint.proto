@@ -2,10 +2,9 @@ syntax = "proto3";
 
 import "message.proto";
 import "signature.proto";
-import "tagger/tagger.proto";
 import "gogoproto/gogo.proto";
 package cashu.v1;
-option go_package = "github.com/cashu/rpc/mint";
+option go_package = "gen/go/cashurpc";
 
 
 enum UnitType {
@@ -20,16 +19,16 @@ message PostMintQuoteBolt11Request {
 }
 
 message PostMintQuoteBolt11Response {
-  string quote = 1 [json_name = "quote"];
-  string request = 2 [json_name = "request"];
-  bool paid = 3 [json_name = "paid",(gogoproto.jsontag) = "paid"];
-  int64 expiry = 4 [json_name = "expiry",(gogoproto.jsontag) = "expiry"];
+  string quote = 1 [(gogoproto.jsontag) = "quotes",(gogoproto.moretags) = "xml=\"dawg\"" ];
+  string request = 2[(gogoproto.jsontag) = "request"];
+  bool paid = 3 [(gogoproto.jsontag) = "paid"];
+  int64 expiry = 4 [(gogoproto.jsontag) = "exp"];
 }
 
 
 message PostMintBolt11Request {
-  string quote = 1 [(tagger.tags) = "json:\"quote\""];
-  repeated BlindedMessage outputs = 3 [(tagger.tags) = "json:\"outputs\""];
+  string quote = 1 ;
+  repeated BlindedMessage outputs = 3;
 }
 
 

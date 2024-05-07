@@ -3,7 +3,7 @@ syntax = "proto3";
 import "mint.proto";
 import "proofs.proto";
 package cashu.v1;
-option go_package = "github.com/cashu/rpc/melt";
+option go_package = "gen/go/cashurpc";
 
 message GetQuoteBolt11StateRequest {
   string quote_id = 1;
