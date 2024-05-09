@@ -19,10 +19,10 @@ message PostMintQuoteBolt11Request {
 }
 
 message PostMintQuoteBolt11Response {
-  google.protobuf.StringValue quote = 1;
-  google.protobuf.StringValue request = 2;
-  google.protobuf.BoolValue paid = 3;
-  google.protobuf.UInt64Value expiry = 4;
+  string quote = 1;
+  string request = 2;
+  bool paid = 3 ;
+  uint64 expiry = 4;
 }
 
 
