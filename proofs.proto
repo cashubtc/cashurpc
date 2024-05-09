@@ -12,10 +12,10 @@ A proof is SPENT if it has been redeemed and its secret is in the list of spent 
  */
 
 enum ProofState {
-  unspecified = 0;
-  UNSPENT = 1;
-  PENDING = 2;
-  SPENT = 3;
+  PROOF_STATE_UNSPECIFIED = 0;
+  PROOF_STATE_UNSPENT = 1;
+  PROOF_STATE_PENDING = 2;
+  PROOF_STATE_SPENT = 3;
 }
 
 message Proof {
