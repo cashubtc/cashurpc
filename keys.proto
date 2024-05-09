@@ -7,7 +7,7 @@ message KeysResponse{
   repeated Keyset keysets = 1;
 }
 message KeysRequest{
-
+  string id = 1;
 }
 
 message Keyset {
