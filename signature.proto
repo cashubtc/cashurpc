@@ -1,9 +1,10 @@
 syntax = "proto3";
 package cashu.v1;
 option go_package = "gen/go/cashurpc";
+import "gogoproto/gogo.proto";
 
 message BlindedSignature {
   string id = 1;
   uint64 amount = 2;
-  string C_ = 3;
+  string C_ = 3 [(gogoproto.jsontag) = "C_"];
 }
