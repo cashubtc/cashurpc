@@ -4,6 +4,7 @@ import "message.proto";
 import "signature.proto";
 package cashu.v1;
 option go_package = "gen/go/cashurpc";
+import "google/protobuf/wrappers.proto";
 
 
 enum UnitType {
@@ -18,10 +19,10 @@ message PostMintQuoteBolt11Request {
 }
 
 message PostMintQuoteBolt11Response {
-  string quote = 1;
-  string request = 2;
-  bool paid = 3 ;
-  sint64 expiry = 4;
+  google.protobuf.StringValue quote = 1;
+  google.protobuf.StringValue request = 2;
+  google.protobuf.BoolValue paid = 3;
+  google.protobuf.UInt64Value expiry = 4;
 }
 
 

@@ -21,6 +21,7 @@ service Mint {
       get: "/v1/keys"
       response_body: "message"
       additional_bindings {
+        body: "*"
         response_body: "message"
       }
     };
