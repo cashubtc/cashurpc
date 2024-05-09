@@ -20,6 +20,9 @@ service Mint {
     option (google.api.http) = {
       get: "/v1/keys"
       response_body: "message"
+      additional_bindings {
+        response_body: "message"
+      }
     };
   };
   // Starting https://github.com/cashubtc/nuts/blob/main/02.md
