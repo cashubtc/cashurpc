@@ -19,28 +19,17 @@ service Mint {
   rpc  Keys(KeysRequest) returns (KeysResponse){
     option (google.api.http) = {
       get: "/v1/keys"
-      response_body: "message"
-      additional_bindings {
-        body: "*"
-        response_body: "message"
-      }
     };
   };
   rpc  KeysById(KeysRequest) returns (KeysResponse){
     option (google.api.http) = {
       get: "/v1/keys/{id}"
-      response_body: "message"
-      additional_bindings {
-        body: "*"
-        response_body: "message"
-      }
     };
   };
   // Starting https://github.com/cashubtc/nuts/blob/main/02.md
   rpc  KeySets(KeysRequest) returns (KeysResponse){
     option (google.api.http) = {
       get: "/v1/keysets"
-      response_body: "message"
     };
   };
   // Starting https://github.com/cashubtc/nuts/blob/main/03.md
@@ -55,13 +44,11 @@ service Mint {
     option (google.api.http) = {
       post: "/v1/mint/quote/bolt11"
       body: "*"
-      response_body: "message"
     };
   };
   rpc  MintQuoteState(GetQuoteBolt11StateRequest) returns (PostMintQuoteBolt11Response){
     option (google.api.http) = {
       get: "/v1/mint/quote/bolt11/{quote_id}"
-      response_body: "message"
     };
   };
   rpc  Mint(PostMintBolt11Request) returns (PostMintBolt11Response){
