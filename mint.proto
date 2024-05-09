@@ -2,7 +2,6 @@ syntax = "proto3";
 
 import "message.proto";
 import "signature.proto";
-import "gogoproto/gogo.proto";
 package cashu.v1;
 option go_package = "gen/go/cashurpc";
 
@@ -19,10 +18,10 @@ message PostMintQuoteBolt11Request {
 }
 
 message PostMintQuoteBolt11Response {
-  string quote = 1 [(gogoproto.jsontag) = "quotes",(gogoproto.moretags) = "xml=\"dawg\"" ];
-  string request = 2[(gogoproto.jsontag) = "request"];
-  bool paid = 3 [(gogoproto.jsontag) = "paid"];
-  int64 expiry = 4 [(gogoproto.jsontag) = "exp"];
+  string quote = 1;
+  string request = 2;
+  bool paid = 3 ;
+  sint64 expiry = 4;
 }
 
 
