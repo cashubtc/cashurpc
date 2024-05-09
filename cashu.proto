@@ -28,7 +28,7 @@ service Mint {
   };
   rpc  KeysById(KeysRequest) returns (KeysResponse){
     option (google.api.http) = {
-      get: "/v1/keys"
+      get: "/v1/keys/{id}"
       response_body: "message"
       additional_bindings {
         body: "*"
